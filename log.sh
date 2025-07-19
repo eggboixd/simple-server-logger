@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 get_cpu_usage(){
   echo "CPU Usage:"
   mpstat 1 1 | awk '/all/ { printf "CPU Usage: %.2f%% used\n", 100 - $12 }'
